@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julia, You Are My Everything ❤️</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #ffe6e6;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+        h1 {
+            color: #d40000;
+            font-size: 2.5em;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .heart {
+            font-size: 3em;
+            color: #d40000;
+            animation: heartbeat 1.5s infinite;
+        }
+        .options {
+            margin-top: 20px;
+        }
+        .yes, .no {
+            padding: 12px 24px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+        .yes {
+            background-color: #28a745;
+            color: white;
+        }
+        .no {
+            background-color: #dc3545;
+            color: white;
+        }
+        .yes:hover {
+            transform: scale(1.1);
+        }
+        .no:hover {
+            transform: scale(1.1);
+        }
+        .message {
+            font-size: 1.8em;
+            color: #d40000;
+            margin-top: 20px;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+        .hidden {
+            display: none;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        @keyframes floatUp {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Julia, You Are My Everything ❤️</h1>
+    <div class="heart">💖</div>
+    <p style="font-size: 1.2em; color: #333;">From the moment I met you, I knew you were special. <br> Will you make me the happiest person alive?</p>
+
+    <div class="options">
+        <button class="yes" onclick="acceptProposal()">Yes! 💍</button>
+        <button class="no" onclick="declineProposal()">No 😢</button>
+    </div>
+
+    <p id="message" class="message"></p>
+
+    <script>
+        function acceptProposal() {
+            document.getElementById("message").innerHTML = "🥰 Yay! You just made my life complete! 💖<br><br> If you accept, just mail me at <a href='mailto:darshanraju587@gmail.com'>darshanraju587@gmail.com</a>";
+            document.getElementById("message").style.opacity = "1";
+        }
+
+        function declineProposal() {
+            document.getElementById("message").innerHTML = "💔 Oh no! But no matter what, you will always have my heart.";
+            document.getElementById("message").style.opacity = "1";
+        }
+    </script>
+</body>
+</html>
